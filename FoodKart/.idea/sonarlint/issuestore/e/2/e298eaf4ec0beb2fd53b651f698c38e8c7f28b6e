@@ -1,0 +1,42 @@
+
+
+java:S1192:"JDefine a constant instead of duplicating this literal "FoodItem=" 3 times.(Š´· 8Â»È«ú1J$54e5f331-06a2-4b78-9eaa-dcff89c1fe35
+
+java:S1192:"JDefine a constant instead of duplicating this literal "Quantity=" 3 times.(Š´· 8Â»È«ú1J$1d2ebd46-d730-463d-b397-cfbce88c9098
+‰
+java:S1192:"FDefine a constant instead of duplicating this literal "Name=" 3 times.(Š´· 8Â»È«ú1J$60fa2880-b353-4f8b-9cd1-0f625f620341
+‹
+java:S1192:"HDefine a constant instead of duplicating this literal "Review=" 3 times.(Š´· 8ñðÎ«ú1J$2c705176-ef6c-4ac8-b35b-47e7120523c2
+Š
+java:S1192:"GDefine a constant instead of duplicating this literal "Price=" 3 times.(Š´· 8Â»È«ú1J$74514c1e-3eb7-4dbb-964c-9dc208550508
+‹
+java:S1192:"HDefine a constant instead of duplicating this literal "Rating=" 3 times.(Š´· 8ñðÎ«ú1J$6d966457-cae0-4fcd-a5fb-5c5f49b3b50b
+Œ
+java:S1192:"IDefine a constant instead of duplicating this literal "Address=" 3 times.(Š´· 8Â»È«ú1J$4d6068f4-2a4c-4146-a8cf-bac62fd8f289
+•
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(Çµí‘8š¼È«ú1J$6a640873-9ece-43e4-9019-3c52c01f0809
+r
+java:S5869"*Remove duplicates in this character class.(Ð±ãüýÿÿÿÿ8Ÿ¼È«ú1J$1c17bdbd-2fb2-4cb1-a200-267c57e1f63b
+_
+java:S1116#"Remove this empty statement.(Ú•ÀÁ8¡¼È«ú1J$ed76cc07-c38a-4d10-b13b-0098f972947a
+
+java:S2130,">Use "Double.parseDouble" for this string-to-double conversion.(ÎŒäÂ8¢¼È«ú1J$092cbb77-4462-4402-a11c-7018004cda93
+|
+java:S2130-"9Use "Integer.parseInt" for this string-to-int conversion.(ÞÏé»8¢¼È«ú1J$05082ed7-5f15-4561-814f-d8d6ce9113fc
+m	java:S106:"+Replace this use of System.out by a logger.(Š´· 8£¼È«ú1J$cf7f5766-d51e-483c-a7f8-27ecfc17c63a
+m	java:S106?"+Replace this use of System.out by a logger.(Š´· 8£¼È«ú1J$f7373a82-fe26-46ee-98be-642bfd7349b2
+m	java:S106D"+Replace this use of System.out by a logger.(Š´· 8¤¼È«ú1J$5aabab78-f9f4-43c4-9830-4e7d20942332
+|
+java:S2130K"9Use "Integer.parseInt" for this string-to-int conversion.(©’—ÿ8¤¼È«ú1J$878aba1b-89ea-4d07-bed7-1ba441a02723
+
+java:S2130Q">Use "Double.parseDouble" for this string-to-double conversion.(¼±»Ý8¥¼È«ú1J$5cd9d4a1-d57e-442a-8c83-b7892dd4bcc2
+|
+java:S2130X"9Use "Integer.parseInt" for this string-to-int conversion.(©’—ÿ8¥¼È«ú1J$e4c9c909-1bed-4920-9af1-42c08073b590
+d
+java:S1116]"Remove this empty statement.(ªÀ¥¢ûÿÿÿÿ8¦¼È«ú1J$ce60e243-fc58-4c90-b576-ea33899b13fe
+_
+java:S1116^"Remove this empty statement.(·¾²ß8¦¼È«ú1J$856b3388-cf78-447d-9206-b274904446c0
+r	java:S106c"+Replace this use of System.out by a logger.(½ë”ûýÿÿÿÿ8¦¼È«ú1J$3c3b7ecb-6ec9-4769-9c15-487e71d6e53c
+m	java:S106f"+Replace this use of System.out by a logger.(õ®¦ñ8¦¼È«ú1J$28bf77ce-9dcf-454a-ab96-6d2ee3bd3b60
+‰
+java:S6541"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 90 to 64, Complexity from 16 to 14, Nesting Level from 5 to 2, Number of Variables from 33 to 6.(Çµí‘8¦¼È«ú1J$5aedb2d6-ece8-4192-9218-160f3d120e84

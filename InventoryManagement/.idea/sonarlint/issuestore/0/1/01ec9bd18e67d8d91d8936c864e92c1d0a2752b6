@@ -1,0 +1,19 @@
+
+—
+java:S1192#"TDefine a constant instead of duplicating this literal "Inventory not found" 4 times.(¢©æ‘8ØˆÙ÷ù1J$57a0cecc-135e-49b2-9b71-e6f8c0aedb77
+˜
+java:S1192("UDefine a constant instead of duplicating this literal "Displaying inventory" 3 times.(îÜ‡8ÙˆÙ÷ù1J$3382bc40-51c8-4ec7-95ba-afd848bc085f
+•
+java:S1192+"RDefine a constant instead of duplicating this literal "Inventory found: " 3 times.(“èŞ«8ÙˆÙ÷ù1J$0d4f525c-5def-4494-95a0-26a808f3907f
+z
+java:S2629+"7Use the built-in formatting to construct this argument.(“èŞ«8ÙˆÙ÷ù1J$8a8b185e-6797-445f-9607-6319a89ae13e
+z
+java:S26293"7Use the built-in formatting to construct this argument.(›­áÏ8ÙˆÙ÷ù1J$1f93f3eb-8d1c-42d0-aad1-d5db6a69d8d0
+z
+java:S2629I"7Use the built-in formatting to construct this argument.(“èŞ«8ÚˆÙ÷ù1J$c1b83ade-b504-4c78-ad94-7a003e0ae723
+„
+java:S3457+"AFormat specifiers should be used instead of string concatenation.(“èŞ«8âˆÙ÷ù1J$1dec431e-65e6-408f-bcd8-562bc286a1de
+„
+java:S34573"AFormat specifiers should be used instead of string concatenation.(›­áÏ8ãˆÙ÷ù1J$cfa241fa-7cfd-435d-9a3e-3d936dbfe65e
+„
+java:S3457I"AFormat specifiers should be used instead of string concatenation.(“èŞ«8äˆÙ÷ù1J$f627b975-92db-495c-b760-a4ec35207371

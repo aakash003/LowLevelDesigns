@@ -1,0 +1,10 @@
+
+“
+java:S1192)"KDefine a constant instead of duplicating this literal "SavageLand" 3 times.(”¸îûÿÿÿÿ8À…¹ÿù1J$97352d5c-f09a-476d-bf81-077983842dbe
+‹
+java:S1192'"HDefine a constant instead of duplicating this literal "AirBase" 4 times.(ü–Ü8Á…¹ÿù1J$41d1fc17-6ba2-4fb1-a710-ea9269e46065
+“	java:S117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡¦£8Â…¹ÿù1J$c4038190-8674-48e5-80e3-4043a6206ca8
+˜	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Öé•µÿÿÿÿÿ8Â…¹ÿù1J$c1939290-6b1f-4b99-adbd-ffae6c45616e
+˜	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘áÕşûÿÿÿÿ8Â…¹ÿù1J$e030f460-db5b-4d86-b0ff-8a88dc59b8eb
+r	java:S106F"+Replace this use of System.out by a logger.(½ë”ûıÿÿÿÿ8Ì…¹ÿù1J$71d39a87-74cc-4141-a6ca-a811ee819a64
+m	java:S106I"+Replace this use of System.out by a logger.(õ®¦ñ8Ì…¹ÿù1J$24315e20-27eb-4bd2-a972-a79eaa134ee1

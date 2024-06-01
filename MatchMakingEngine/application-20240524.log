@@ -1,0 +1,30 @@
+2024-05-24 10:02:35.697 [main] INFO  org.flipkart.service.MatchmakingEngine - New game created and player player1 added to it
+2024-05-24 10:02:35.704 [main] INFO  org.flipkart.service.MatchmakingEngine - Player player2 added to game with game mode: org.flipkart.entity.GameMode@14a50707
+2024-05-24 10:02:35.705 [main] INFO  org.flipkart.service.MatchmakingEngine - Player player3 added to game with game mode: org.flipkart.entity.GameMode@14a50707
+2024-05-24 10:02:35.705 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: org.flipkart.entity.Game@6e15fe2
+2024-05-24 10:02:35.705 [main] INFO  org.flipkart.service.MatchmakingEngine - Player player4 added to game with game mode: org.flipkart.entity.GameMode@14a50707
+2024-05-24 10:04:18.165 [main] INFO  org.flipkart.service.MatchmakingEngine - New game created and player player1 added to it
+2024-05-24 10:04:18.173 [main] INFO  org.flipkart.service.MatchmakingEngine - Player player2 added to game with game mode: TwoVTwo
+2024-05-24 10:04:18.173 [main] INFO  org.flipkart.service.MatchmakingEngine - Player player3 added to game with game mode: TwoVTwo
+2024-05-24 10:04:18.174 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: org.flipkart.entity.Game@6e15fe2
+2024-05-24 10:04:18.174 [main] INFO  org.flipkart.service.MatchmakingEngine - Player player4 added to game with game mode: TwoVTwo
+2024-05-24 10:06:52.074 [main] INFO  org.flipkart.service.MatchmakingEngine - New game created and player player1 added to it
+2024-05-24 10:07:02.374 [main] INFO  org.flipkart.service.MatchmakingEngine - Player player2 added to game with game mode: TwoVTwo
+2024-05-24 10:07:27.955 [main] INFO  org.flipkart.service.MatchmakingEngine - Player player3 added to game with game mode: TwoVTwo
+2024-05-24 10:08:07.387 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: org.flipkart.entity.Game@4b7dc788
+2024-05-24 10:08:09.133 [main] INFO  org.flipkart.service.MatchmakingEngine - Player player4 added to game with game mode: TwoVTwo
+2024-05-24 10:09:50.818 [main] INFO  org.flipkart.service.MatchmakingEngine - New game created and player player1 added to it
+2024-05-24 10:09:50.829 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: Game{gameMode=org.flipkart.entity.GameMode@14a50707, gameLocation=org.flipkart.entity.GameLocation@1ef6d34c, players=[org.flipkart.entity.Player@46271dd6, org.flipkart.entity.Player@11bb571c, org.flipkart.entity.Player@7c51f34b, org.flipkart.entity.Player@5495333e]}
+2024-05-24 10:11:34.895 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: Game{gameMode=TwoVTwo, gameLocation=CastleTown, players=[Player{name='player1', rank=BRONZE}, Player{name='player2', rank=BRONZE}, Player{name='player3', rank=BRONZE}, Player{name='player4', rank=BRONZE}]}
+2024-05-24 10:32:54.835 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: Game{gameMode=FastDraw, gameLocation=CastleTown, players=[]}
+2024-05-24 15:46:39.099 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: Game{gameMode=TwoVTwo, gameLocation=CastleTown, players=[Player{name='player1', rank=BRONZE}, Player{name='player3', rank=BRONZE}, Player{name='player4', rank=BRONZE}, Player{name='player1', rank=BRONZE}]}
+2024-05-24 15:46:39.114 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: Game{gameMode=TwoVTwo, gameLocation=CastleTown, players=[Player{name='player2', rank=BRONZE}, Player{name='player2', rank=BRONZE}, Player{name='player3', rank=BRONZE}, Player{name='player4', rank=BRONZE}]}
+2024-05-24 16:06:11.326 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: org.flipkart.entity.Game@7cb502c
+2024-05-24 16:08:06.402 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: org.flipkart.entity.Game@3fc79729
+2024-05-24 16:16:19.153 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: org.flipkart.entity.Game@389c4eb1
+2024-05-24 16:21:35.305 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: org.flipkart.entity.Game@df6620a
+2024-05-24 16:25:27.931 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: Game{gameMode=org.flipkart.entity.GameMode@52e7a6b2, gameLocation=org.flipkart.entity.GameLocation@379614be, players=[Player{name='player1', rank=BRONZE}, Player{name='player2', rank=BRONZE}, Player{name='player3', rank=BRONZE}, Player{name='player4', rank=BRONZE}]}
+2024-05-24 16:28:41.521 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: Game{gameMode=org.flipkart.entity.GameMode@52e7a6b2, gameLocation=org.flipkart.entity.GameLocation@379614be, players=[Player{name='player1', rank=BRONZE}, Player{name='player2', rank=BRONZE}, Player{name='player3', rank=BRONZE}, Player{name='player4', rank=BRONZE}]}
+2024-05-24 16:32:20.926 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: Game{gameMode=TwoVTwo, gameLocation=CastleTown, players=[Player{name='player1', rank=BRONZE}, Player{name='player2', rank=BRONZE}, Player{name='player3', rank=BRONZE}, Player{name='player4', rank=BRONZE}]}
+2024-05-24 16:33:00.370 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: Game{gameMode=FastDraw, gameLocation=CastleTown, players=[Player{name='player8', rank=PLATINUM}, Player{name='player9', rank=DIAMOND}]}
+2024-05-25 08:12:34.668 [main] INFO  org.flipkart.service.MatchmakingEngine - Game moved to playing pool: Game{gameMode=TwoVTwo, gameLocation=CastleTown, players=[Player{name='player1', rank=BRONZE}, Player{name='player2', rank=BRONZE}, Player{name='player1', rank=BRONZE}, Player{name='player2', rank=BRONZE}]}

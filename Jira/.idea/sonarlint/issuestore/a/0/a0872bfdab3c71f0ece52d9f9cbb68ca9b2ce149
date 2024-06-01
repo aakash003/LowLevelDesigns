@@ -1,0 +1,9 @@
+
+M
+java:S2629T"7Use the built-in formatting to construct this argument.(åËÛ
+V
+java:S3457O"AFormat specifiers should be used instead of string concatenation.(ˆõû\
+W
+java:S3457T"AFormat specifiers should be used instead of string concatenation.(åËÛ
+W
+java:S3457W"AFormat specifiers should be used instead of string concatenation.(÷˜È¢

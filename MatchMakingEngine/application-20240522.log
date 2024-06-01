@@ -1,0 +1,232 @@
+2024-05-22 10:54:45.935 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 10:54:45.936 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 10:54:45.936 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 10:54:45.936 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 10:54:45.936 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 10:54:45.936 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 10:54:45.937 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 10:54:45.937 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 10:54:45.937 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 10:54:45.937 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 10
+2024-05-22 10:55:57.022 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 10:55:57.023 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 10:55:57.023 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 10:55:57.023 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 10:55:57.023 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 10:55:57.023 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 10:55:57.023 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 10:55:57.023 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 10:55:57.024 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 10:55:57.024 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 10
+2024-05-22 10:55:57.024 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 10:55:57.024 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:08:03.014 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:08:03.016 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:08:03.016 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:08:03.016 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:08:03.016 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:08:03.016 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:08:03.016 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:08:03.016 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:08:03.016 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:08:03.016 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 10
+2024-05-22 12:08:03.016 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:08:03.016 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:08:03.016 [main] INFO  org.flipkart.service.InventoryManagerService - Creating user
+2024-05-22 12:08:03.016 [main] INFO  org.flipkart.service.InventoryManagerService - User created
+2024-05-22 12:08:03.017 [main] INFO  org.flipkart.service.InventoryManagerService - Creating user
+2024-05-22 12:08:03.017 [main] INFO  org.flipkart.service.InventoryManagerService - User created
+2024-05-22 12:08:03.017 [main] INFO  org.flipkart.service.CartService - Adding item to cart
+2024-05-22 12:08:03.017 [main] INFO  org.flipkart.service.CartService - Adding item to cart
+2024-05-22 12:08:03.017 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:08:03.017 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:08:03.017 [main] INFO  org.flipkart.service.CheckoutService - Checking out
+2024-05-22 12:08:03.017 [main] ERROR org.flipkart.service.CheckoutService - Not enough balance
+2024-05-22 12:08:03.017 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:08:03.017 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:08:30.795 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:08:30.796 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:08:30.796 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:08:30.796 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:08:30.796 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:08:30.796 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:08:30.796 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:08:30.797 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:08:30.797 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:08:30.797 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 10
+2024-05-22 12:08:30.797 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:08:30.797 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:08:30.797 [main] INFO  org.flipkart.service.InventoryManagerService - Creating user
+2024-05-22 12:08:30.797 [main] INFO  org.flipkart.service.InventoryManagerService - User created
+2024-05-22 12:08:30.797 [main] INFO  org.flipkart.service.InventoryManagerService - Creating user
+2024-05-22 12:08:30.797 [main] INFO  org.flipkart.service.InventoryManagerService - User created
+2024-05-22 12:08:30.797 [main] INFO  org.flipkart.service.CartService - Adding item to cart
+2024-05-22 12:08:30.798 [main] INFO  org.flipkart.service.CartService - Adding item to cart
+2024-05-22 12:08:30.798 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:08:30.798 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:08:30.798 [main] INFO  org.flipkart.service.CheckoutService - Checking out
+2024-05-22 12:08:30.798 [main] INFO  org.flipkart.service.InventoryManagerService - Deleting inventory
+2024-05-22 12:08:30.798 [main] INFO  org.flipkart.service.InventoryManagerService - Deleting inventory
+2024-05-22 12:08:30.798 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:08:30.798 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=5, Nestle:Milk=5, Amul:Curd=10}
+2024-05-22 12:10:00.836 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:10:00.837 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:10:00.837 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:10:00.837 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:10:00.837 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:10:00.838 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:10:00.838 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:10:00.838 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:10:00.838 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:10:00.839 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 10
+2024-05-22 12:10:00.839 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:10:00.839 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:10:00.839 [main] INFO  org.flipkart.service.InventoryManagerService - Creating user
+2024-05-22 12:10:00.839 [main] INFO  org.flipkart.service.InventoryManagerService - User created
+2024-05-22 12:10:00.839 [main] INFO  org.flipkart.service.InventoryManagerService - Creating user
+2024-05-22 12:10:00.839 [main] INFO  org.flipkart.service.InventoryManagerService - User created
+2024-05-22 12:10:00.839 [main] INFO  org.flipkart.service.CartService - Adding item to cart
+2024-05-22 12:10:00.840 [main] INFO  org.flipkart.service.CartService - Adding item to cart
+2024-05-22 12:10:00.840 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:10:00.840 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:10:00.840 [main] INFO  org.flipkart.service.CheckoutService - Checking out
+2024-05-22 12:10:00.840 [main] INFO  org.flipkart.service.InventoryManagerService - Deleting inventory
+2024-05-22 12:10:00.840 [main] INFO  org.flipkart.service.InventoryManagerService - Deleting inventory
+2024-05-22 12:10:00.840 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:10:00.840 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=5, Nestle:Milk=5, Amul:Curd=10}
+2024-05-22 12:10:00.840 [main] INFO  org.flipkart.service.SearchService - Searching item
+2024-05-22 12:10:00.841 [main] ERROR org.flipkart.service.SearchService - Item not found
+2024-05-22 12:10:31.450 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:10:31.452 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:10:31.452 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:10:31.452 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:10:31.452 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:10:31.452 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:10:31.452 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:10:31.452 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:10:31.453 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:10:31.453 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 10
+2024-05-22 12:10:31.453 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:10:31.453 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:10:31.453 [main] INFO  org.flipkart.service.InventoryManagerService - Creating user
+2024-05-22 12:10:31.453 [main] INFO  org.flipkart.service.InventoryManagerService - User created
+2024-05-22 12:10:31.454 [main] INFO  org.flipkart.service.InventoryManagerService - Creating user
+2024-05-22 12:10:31.455 [main] INFO  org.flipkart.service.InventoryManagerService - User created
+2024-05-22 12:10:31.455 [main] INFO  org.flipkart.service.CartService - Adding item to cart
+2024-05-22 12:10:31.455 [main] INFO  org.flipkart.service.CartService - Adding item to cart
+2024-05-22 12:10:31.455 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:10:31.455 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:10:31.455 [main] INFO  org.flipkart.service.CheckoutService - Checking out
+2024-05-22 12:10:31.455 [main] INFO  org.flipkart.service.InventoryManagerService - Deleting inventory
+2024-05-22 12:10:31.456 [main] INFO  org.flipkart.service.InventoryManagerService - Deleting inventory
+2024-05-22 12:10:31.456 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:10:31.456 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=5, Nestle:Milk=5, Amul:Curd=10}
+2024-05-22 12:10:31.456 [main] INFO  org.flipkart.service.SearchService - Searching item
+2024-05-22 12:10:31.456 [main] INFO  org.flipkart.service.SearchService - Item found
+2024-05-22 12:10:31.456 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:10:31.456 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 5
+2024-05-22 12:10:31.456 [main] INFO  org.flipkart.service.SearchService - Item found
+2024-05-22 12:10:31.456 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:10:31.457 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 5
+2024-05-22 12:11:04.891 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:11:04.892 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:11:04.892 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:11:04.892 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:11:04.892 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:11:04.893 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:11:04.893 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:11:04.893 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:11:04.893 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:11:04.893 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 10
+2024-05-22 12:11:04.893 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:11:04.894 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:11:04.894 [main] INFO  org.flipkart.service.InventoryManagerService - Creating user
+2024-05-22 12:11:04.894 [main] INFO  org.flipkart.service.InventoryManagerService - User created
+2024-05-22 12:11:04.894 [main] INFO  org.flipkart.service.InventoryManagerService - Creating user
+2024-05-22 12:11:04.894 [main] INFO  org.flipkart.service.InventoryManagerService - User created
+2024-05-22 12:11:04.894 [main] INFO  org.flipkart.service.CartService - Adding item to cart
+2024-05-22 12:11:04.894 [main] INFO  org.flipkart.service.CartService - Adding item to cart
+2024-05-22 12:11:04.895 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:11:04.895 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:11:04.895 [main] INFO  org.flipkart.service.CheckoutService - Checking out
+2024-05-22 12:11:04.895 [main] INFO  org.flipkart.service.InventoryManagerService - Deleting inventory
+2024-05-22 12:11:04.895 [main] INFO  org.flipkart.service.InventoryManagerService - Deleting inventory
+2024-05-22 12:11:04.895 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:11:04.895 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=5, Nestle:Milk=5, Amul:Curd=10}
+2024-05-22 12:11:04.895 [main] INFO  org.flipkart.service.SearchService - Searching item
+2024-05-22 12:11:04.895 [main] INFO  org.flipkart.service.SearchService - Item found
+2024-05-22 12:11:04.896 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:11:04.896 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 5
+2024-05-22 12:11:04.896 [main] INFO  org.flipkart.service.SearchService - Item found
+2024-05-22 12:11:04.896 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:11:04.896 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 5
+2024-05-22 12:11:31.343 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:11:31.345 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:11:31.345 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:11:31.345 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:11:31.345 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:11:31.345 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:11:31.345 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:11:31.345 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:11:31.346 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:11:31.346 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 10
+2024-05-22 12:11:31.346 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:11:31.346 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:11:31.346 [main] INFO  org.flipkart.service.InventoryManagerService - Creating user
+2024-05-22 12:11:31.347 [main] INFO  org.flipkart.service.InventoryManagerService - User created
+2024-05-22 12:11:31.347 [main] INFO  org.flipkart.service.InventoryManagerService - Creating user
+2024-05-22 12:11:31.347 [main] INFO  org.flipkart.service.InventoryManagerService - User created
+2024-05-22 12:11:31.347 [main] INFO  org.flipkart.service.CartService - Adding item to cart
+2024-05-22 12:11:31.347 [main] INFO  org.flipkart.service.CartService - Adding item to cart
+2024-05-22 12:11:31.347 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:11:31.347 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:11:31.347 [main] INFO  org.flipkart.service.CheckoutService - Checking out
+2024-05-22 12:11:31.347 [main] INFO  org.flipkart.service.InventoryManagerService - Deleting inventory
+2024-05-22 12:11:31.348 [main] INFO  org.flipkart.service.InventoryManagerService - Deleting inventory
+2024-05-22 12:11:31.348 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:11:31.348 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=5, Nestle:Milk=5, Amul:Curd=10}
+2024-05-22 12:11:31.348 [main] INFO  org.flipkart.service.SearchService - Searching item
+2024-05-22 12:11:31.348 [main] INFO  org.flipkart.service.SearchService - Item found
+2024-05-22 12:11:31.348 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:11:31.348 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 5
+2024-05-22 12:11:31.349 [main] INFO  org.flipkart.service.SearchService - Item found
+2024-05-22 12:11:31.349 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:11:31.349 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 5
+2024-05-22 12:11:31.349 [main] INFO  org.flipkart.Main - org.flipkart.entity.SearchResponse@27508c5d
+2024-05-22 12:11:31.349 [main] INFO  org.flipkart.Main - org.flipkart.entity.SearchResponse@4f704591
+2024-05-22 12:12:26.852 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:12:26.853 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:12:26.854 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:12:26.854 [main] INFO  org.flipkart.service.ItemManagerService - Adding item
+2024-05-22 12:12:26.854 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:12:26.854 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:12:26.854 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:12:26.854 [main] INFO  org.flipkart.service.InventoryManagerService - Adding inventory
+2024-05-22 12:12:26.854 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:12:26.855 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 10
+2024-05-22 12:12:26.855 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:12:26.855 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:12:26.855 [main] INFO  org.flipkart.service.InventoryManagerService - Creating user
+2024-05-22 12:12:26.855 [main] INFO  org.flipkart.service.InventoryManagerService - User created
+2024-05-22 12:12:26.855 [main] INFO  org.flipkart.service.InventoryManagerService - Creating user
+2024-05-22 12:12:26.855 [main] INFO  org.flipkart.service.InventoryManagerService - User created
+2024-05-22 12:12:26.855 [main] INFO  org.flipkart.service.CartService - Adding item to cart
+2024-05-22 12:12:26.856 [main] INFO  org.flipkart.service.CartService - Adding item to cart
+2024-05-22 12:12:26.856 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:12:26.856 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=10, Nestle:Milk=5, Amul:Curd=20}
+2024-05-22 12:12:26.856 [main] INFO  org.flipkart.service.CheckoutService - Checking out
+2024-05-22 12:12:26.856 [main] INFO  org.flipkart.service.InventoryManagerService - Deleting inventory
+2024-05-22 12:12:26.857 [main] INFO  org.flipkart.service.InventoryManagerService - Deleting inventory
+2024-05-22 12:12:26.857 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:12:26.857 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: {Nestle:Curd=10, Amul:Milk=5, Nestle:Milk=5, Amul:Curd=10}
+2024-05-22 12:12:26.857 [main] INFO  org.flipkart.service.SearchService - Searching item
+2024-05-22 12:12:26.857 [main] INFO  org.flipkart.service.SearchService - Item found
+2024-05-22 12:12:26.857 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:12:26.857 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 5
+2024-05-22 12:12:26.857 [main] INFO  org.flipkart.service.SearchService - Item found
+2024-05-22 12:12:26.858 [main] INFO  org.flipkart.service.InventoryManagerService - Displaying inventory
+2024-05-22 12:12:26.858 [main] INFO  org.flipkart.service.InventoryManagerService - Inventory found: 5
+2024-05-22 12:12:26.862 [main] INFO  org.flipkart.Main - Amul,Milk,100.0,5
+
+2024-05-22 12:12:26.862 [main] INFO  org.flipkart.Main - Nestle,Milk,10.0,5
+
