@@ -38,6 +38,12 @@ public class SnakeGame {
         if (x < 0 || x >= m || y < 0 || y >= n) {
             return -1;
         }
+
+        int cur = f(x, y);
+        if (vis.contains(cur) && cur != q.peekLast()) {
+            return -1;
+        }
+
         if (idx < food.length && x == food[idx][0] && y == food[idx][1]) {
             ++score;
             ++idx;
@@ -45,10 +51,7 @@ public class SnakeGame {
             int t = q.pollLast();
             vis.remove(t);
         }
-        int cur = f(x, y);
-        if (vis.contains(cur)) {
-            return -1;
-        }
+
         q.offerFirst(cur);
         vis.add(cur);
         return score;
@@ -57,4 +60,52 @@ public class SnakeGame {
     private int f(int i, int j) {
         return i * n + j;
     }
+
+
+    public void printSnake() {
+        char[][] grid = new char[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                grid[i][j] = '.';
+            }
+        }
+        for (int[] f : food) {
+            if (f[0] < m && f[1] < n) {
+                grid[f[0]][f[1]] = 'F';
+            }
+        }
+        for (int pos : q) {
+            int i = pos / n;
+            int j = pos % n;
+            grid[i][j] = 'S';
+        }
+        for (char[] row : grid) {
+            for (char cell : row) {
+                System.out.print(cell + " ");
+            }
+            System.out.println();
+        }
+    }
+
+
+    public static void main(String[] args) {
+        int width = 3;
+        int height = 2;
+        int[][] food = {{1, 2}, {0, 1}};
+
+        SnakeGame game = new SnakeGame(width, height, food);
+
+        System.out.println(game.move("R")); // Output: 0
+        game.printSnake();
+        System.out.println(game.move("D")); // Output: 0
+        game.printSnake();
+        System.out.println(game.move("R")); // Output: 1
+        game.printSnake();
+        System.out.println(game.move("U")); // Output: 1
+        game.printSnake();
+        System.out.println(game.move("L")); // Output: 2
+        game.printSnake();
+        System.out.println(game.move("U")); // Output: -1 (Game over)
+    }
+
 }
