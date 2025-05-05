@@ -1,4 +1,6 @@
+package org.flipkart.servertracker;
 
+import lombok.var;
 
 import java.util.*;
 
@@ -64,10 +66,7 @@ public class Tracker {
         }
         return result;
     }
-}
 
-
-public class Main {
     public static void main(String[] args) {
         Tracker tracker = new Tracker();
 

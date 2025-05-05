@@ -1,7 +1,9 @@
-package org.flipkart;
+package org.flipkart.storeclosingtime;
 
-
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class CustomerLog {
 
@@ -9,12 +11,12 @@ public class CustomerLog {
         String[] arr = log.split(" ");
         int penalty = 0;
 
-// Before or at closing — penalize 'N' (store open but no customer)
+        // Before or at closing — penalize 'N' (store open but no customer)
         for (int i = 0; i < closingTime; i++) {
             if (arr[i].equals("N")) penalty++;
         }
 
-// After closing — penalize 'Y' (store closed but customer comes)
+        // After closing — penalize 'Y' (store closed but customer comes)
         for (int i = closingTime; i < arr.length; i++) {
             if (arr[i].equals("Y")) penalty++;
         }

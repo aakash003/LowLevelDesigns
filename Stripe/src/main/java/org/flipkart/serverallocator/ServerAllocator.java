@@ -1,3 +1,5 @@
+package org.flipkart.serverallocator;
+
 import java.util.*;
 
 public class ServerAllocator {

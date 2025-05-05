@@ -1,3 +1,4 @@
+package org.flipkart.stringcompression;
 
 import java.util.*;
 

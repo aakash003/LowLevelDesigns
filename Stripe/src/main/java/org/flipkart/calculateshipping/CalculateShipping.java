@@ -1,3 +1,5 @@
+package org.flipkart.calculateshipping;
+
 import java.util.*;
 
 public class CalculateShipping {
