@@ -20,11 +20,11 @@ public class CurrencyConverter {
             if (!map.containsKey(node.end)) map.put(node.end, new HashMap());
             map.get(node.end).put(node.start, 1.0 / node.ratio);
         }
-        Queue<String> q = new LinkedList();
-        Queue<Double> val = new LinkedList();
+        Queue<String> q = new LinkedList<>();
+        Queue<Double> val = new LinkedList<>();
         q.offer(start);
         val.offer(1.0);
-        Set<String> visited = new HashSet();
+        Set<String> visited = new HashSet<>();
         while (!q.isEmpty()) {
             String cur = q.poll();
             double num = val.poll();

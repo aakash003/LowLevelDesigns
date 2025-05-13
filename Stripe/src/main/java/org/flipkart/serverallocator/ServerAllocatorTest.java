@@ -1,5 +1,6 @@
+package org.flipkart.serverallocator;
 
-
+import org.flipkart.serverallocator.ServerAllocator;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.Collections;
