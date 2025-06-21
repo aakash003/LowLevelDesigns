@@ -4,7 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e3ea162-72a2-4779-b860-9fd6389d1abd" name="Changes" comment="" />
+    <list default="true" id="6e3ea162-72a2-4779-b860-9fd6389d1abd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ActorSystem/application-20240522.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FlipMed/application-20240522.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FlipMed/application-20240527.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FlipkartNewsFeed/application-20240522.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FoodKart/application-20240522.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FoodKart/application-20240523.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../InventoryManagement/application-20240522.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MatchMakingEngine/application-20240522.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MatchMakingEngine/application-20240524.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MatchMakingEngine/application-20240525.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticeRepo/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticeRepo/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticeRepo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticeRepo/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticeRepo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticeRepo/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticeRepo/PracticeRepo 2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticeRepo/PracticeRepo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.gitignore 2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/application-20240522 2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/application-20240522.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/pom 2.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,28 +52,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.CalculateShipping.executor": "Run",
-    "Application.CurrencyConverter.executor": "Run",
-    "Application.CustomerLog.executor": "Run",
-    "Application.ParseAcceptLanguage.executor": "Run",
-    "Application.ServerAllocator.executor": "Run",
-    "Application.StringCompressor.executor": "Run",
-    "Application.Tracker.executor": "Run",
-    "Application.Unnamed.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/aakashkumar/Documents/LowLevelDesigns/Stripe",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.CalculateShipping.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CurrencyConverter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CustomerLog.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ParseAcceptLanguage.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ServerAllocator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StringCompressor.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Tracker.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/aakashkumar/Documents/LowLevelDesigns/Stripe&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
