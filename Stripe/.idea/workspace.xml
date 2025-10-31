@@ -5,29 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e3ea162-72a2-4779-b860-9fd6389d1abd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ActorSystem/application-20240522.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FlipMed/application-20240522.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FlipMed/application-20240527.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FlipkartNewsFeed/application-20240522.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FoodKart/application-20240522.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FoodKart/application-20240523.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InventoryManagement/application-20240522.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MatchMakingEngine/application-20240522.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MatchMakingEngine/application-20240524.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MatchMakingEngine/application-20240525.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PracticeRepo/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PracticeRepo/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PracticeRepo/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PracticeRepo/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PracticeRepo/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PracticeRepo/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PracticeRepo/PracticeRepo 2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PracticeRepo/PracticeRepo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/.gitignore 2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/application-20240522 2.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/application-20240522.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/pom 2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Atlassian/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Atlassian/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/sonarlint/issuestore/3/3/33d3a7c3c89d7e3dca7d639cda5e595447d2923d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/sonarlint/issuestore/5/c/5cc794f858969b1f284a33f29671845f85e1ee73" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/sonarlint/issuestore/6/4/6458039ea9d43cf5667a9932fa9eb67626e96b41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/sonarlint/issuestore/e/2/e298eaf4ec0beb2fd53b651f698c38e8c7f28b6e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/sonarlint/issuestore/e/3/e3b6679abb10c20633277223d9d4713ba58075bc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/sonarlint/securityhotspotstore/3/3/33d3a7c3c89d7e3dca7d639cda5e595447d2923d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/sonarlint/securityhotspotstore/5/c/5cc794f858969b1f284a33f29671845f85e1ee73" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/sonarlint/securityhotspotstore/6/4/6458039ea9d43cf5667a9932fa9eb67626e96b41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/sonarlint/securityhotspotstore/e/2/e298eaf4ec0beb2fd53b651f698c38e8c7f28b6e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/sonarlint/securityhotspotstore/e/3/e3b6679abb10c20633277223d9d4713ba58075bc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/src/main/java/org/flipkart/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/src/main/resources/log4j2.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
