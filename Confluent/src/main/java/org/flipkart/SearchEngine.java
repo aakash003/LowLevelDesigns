@@ -105,3 +105,11 @@ public class SearchEngine {
         System.out.println("Search 'Cloud computing is' -> " + engine.search("Cloud computing is")); // [1,3]
     }
 }
+
+/**
+ * Operation	Time Complexity	Space Complexity	Notes
+ * Build Index	O(T)	O(V + T)	One-time cost
+ * Search (1 token)	O(k)	—	k = docs containing that token
+ * Search (phrase)	O(m * f * d)	—	m = words in phrase
+ * Tokenize (search phrase)	O(m)	—	negligible
+ */
