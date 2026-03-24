@@ -1,4 +1,4 @@
-package org.flipkart.circuitbreaker;
+package org.flipkart.circuitbreaker.model;
 
 public class Response {
     public final int    statusCode;

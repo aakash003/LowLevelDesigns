@@ -1,139 +1,93 @@
 package org.flipkart.circuitbreaker;
 
+import org.flipkart.circuitbreaker.client.WebClient;
+import org.flipkart.circuitbreaker.exceptions.CircuitOpenException;
+import org.flipkart.circuitbreaker.model.Request;
+import org.flipkart.circuitbreaker.model.Response;
+import org.flipkart.circuitbreaker.test.WebClientCircuitBreakerTest;
+
 import java.time.Instant;
-import java.util.Arrays;
 import java.util.List;
 
 /**
- * Parses lines of the form:
+ * Replays a sequence of (service, statusCode, offsetMinutes) events through a
+ * SHARED WebClient so circuit-breaker state accumulates across events.
  *
- *   <iso-timestamp>  <service>  <status-code>
- *   e.g. "2024-01-15T10:00:00Z ServiceB 500"
+ * Time is driven by a TestClock advanced per event — no wall-clock dependency,
+ * no Thread.sleep(), fully deterministic.
  *
- * and replays them through WebClient.execute(), printing the circuit breaker
- * decision for every event.
+ * Input format (per event):  service  statusCode  offsetMinutes
+ * Example:                   ServiceB 500         2
  */
 public class Simulation {
-
-    /** Parse one line into a (Request, status_code) pair and hand it to the client. */
-    public static void run(WebClient client, String inputLine) {
-        // ── parse ──────────────────────────────────────────────────────────
-        String[] parts = inputLine.trim().split("\\s+");
-        if (parts.length != 3) {
-            System.out.println("[SKIP] malformed input: " + inputLine);
-            return;
-        }
-
-        Instant timestamp;
-        try {
-            timestamp = Instant.parse(parts[0]);
-        } catch (Exception e) {
-            System.out.println("[SKIP] bad timestamp: " + parts[0]);
-            return;
-        }
-
-        String service    = parts[1];
-        int    statusCode = Integer.parseInt(parts[2]);
-        long   epochMs    = timestamp.toEpochMilli();
-
-        Request request = new Request(service, "/api/resource", epochMs);
-
-        // ── build a transport that returns the simulated status code ──────
-        //  (In production this would be replaced with an actual HTTP call.)
-        WebClient singleUseClient = buildClientWith(service, statusCode, epochMs);
-
-        // ── execute ────────────────────────────────────────────────────────
-        String prefix = String.format("[%s] %-10s status=%d", parts[0], service, statusCode);
-        try {
-            Response response = singleUseClient.execute(request);
-            String outcome = response.isSuccess() ? "✓ success" : "✗ failure";
-            System.out.printf("%s  → %s  | circuit=%s%n",
-                prefix, outcome, singleUseClient.stateFor(service));
-        } catch (CircuitOpenException e) {
-            System.out.printf("%s  → BLOCKED (%s)  | circuit=%s%n",
-                prefix, e.getMessage(), singleUseClient.stateFor(service));
-        }
-    }
-
-    // ─────────────────────────────────────────────────────────────────────────
-
-    private static WebClient buildClientWith(String service, int statusCode, long epochMs) {
-        // Build a fresh client pre-seeded with only this transport response.
-        // For a multi-event simulation, pass the *same* WebClient across calls.
-        return new WebClient(req -> new Response(statusCode, "simulated body"));
-    }
-
-    // ─────────────────────────────────────────────────────────────────────────
-    // main — demo with the scenario from the problem statement
-    // ─────────────────────────────────────────────────────────────────────────
 
     public static void main(String[] args) {
 
         System.out.println("=== Circuit Breaker Simulation ===\n");
 
         /*
-         * Scenario:
-         *   T+00  ServiceB 200 → success, circuit stays CLOSED
-         *   T+02  ServiceB 500 → failure #1
-         *   T+04  ServiceB 500 → failure #2
-         *   T+06  ServiceB 500 → failure #3  →  circuit TRIPS to OPEN
-         *   T+08  ServiceB 200 → BLOCKED (circuit OPEN)
-         *   T+10  ServiceC 500 → ServiceC failure #1 (ServiceB still OPEN)
-         *   T+16  ServiceB 200 → BLOCKED (only 6 min elapsed, cooldown = 5 min already passed... wait 5 min = T+11)
-         *   T+12  ServiceB 200 → trial (HALF_OPEN) — success → circuit CLOSES
+         * Scenario (matches the problem statement):
          *
-         * We drive this with a shared WebClient so breaker state accumulates.
+         *   T+ 0 min  ServiceB 200  → success,  CLOSED
+         *   T+ 2 min  ServiceB 500  → failure 1, CLOSED
+         *   T+ 4 min  ServiceB 500  → failure 2, CLOSED
+         *   T+ 6 min  ServiceB 500  → failure 3 → OPEN
+         *   T+ 8 min  ServiceB 200  → BLOCKED   (only 2 min elapsed, cooldown = 5 min)
+         *   T+10 min  ServiceC 500  → ServiceC failure #1 (ServiceB still OPEN)
+         *   T+11 min  ServiceB 200  → BLOCKED   (only 5 min elapsed, need > 5 min)
+         *   T+12 min  ServiceB 200  → HALF_OPEN trial → success → CLOSED
+         *   T+13 min  ServiceB 200  → success,  CLOSED (normal again)
          */
-
-        // ── controlled-clock transport ────────────────────────────────────
-        //   In a real system Instant.now() drives everything.
-        //   For testing, inject a fake clock. Here we use a simple array.
-        List<String[]> events = Arrays.asList(
-            // timestamp (simulated via wall clock offsets below), service, status
-            new String[]{"ServiceB", "200", "0"},
-            new String[]{"ServiceB", "500", "2"},
-            new String[]{"ServiceB", "500", "4"},
-            new String[]{"ServiceB", "500", "6"},   // trips to OPEN
-            new String[]{"ServiceB", "200", "8"},   // blocked
-            new String[]{"ServiceC", "500", "10"},  // ServiceC: failure #1
-            new String[]{"ServiceB", "200", "360"}  // 6 minutes later → HALF_OPEN trial
+        List<Event> events = List.of(
+            new Event("ServiceB", 200,  0),
+            new Event("ServiceB", 500,  2),
+            new Event("ServiceB", 500,  4),
+            new Event("ServiceB", 500,  6),   // trips → OPEN
+            new Event("ServiceB", 200,  8),   // blocked (2 min in cooldown)
+            new Event("ServiceC", 500, 10),   // ServiceC: independent breaker
+            new Event("ServiceB", 200, 11),   // still blocked (5 min not elapsed)
+            new Event("ServiceB", 200, 12),   // HALF_OPEN trial → success → CLOSED
+            new Event("ServiceB", 200, 13)    // back to normal
         );
 
-        // Use a fresh client for this self-contained demo.
-        // The transport derives the response status from a closure captured per event.
-        long baseMs = System.currentTimeMillis();
+        // ── shared clock and client ───────────────────────────────────────
+        // ONE client for the whole simulation so breaker state accumulates.
+        WebClientCircuitBreakerTest.TestClock clock = new WebClientCircuitBreakerTest.TestClock(Instant.EPOCH);
 
-        for (String[] event : events) {
-            String service      = event[0];
-            int    statusCode   = Integer.parseInt(event[1]);
-            long   offsetMin    = Long.parseLong(event[2]);
-            long   requestTimeMs = baseMs + offsetMin * 60_000L;
+        // Transport returns whatever status the current event specifies.
+        // We swap the response via a one-element array (effectively a mutable cell).
+        int[] currentStatus = { 200 };
+        WebClient client = new WebClient(
+            req -> new Response(currentStatus[0], "simulated"),
+            clock
+        );
 
-            // We override Instant.now() via the breaker's internal clock only
-            // if we inject a clock interface. For this demo, we show the
-            // architecture — in production wire in a Clock abstraction.
-            //
-            // Here we run it against the real clock so the output is honest.
-            WebClient client = new WebClient(req -> new Response(statusCode, "ok"));
-            Request   req    = new Request(service, "/api/resource", requestTimeMs);
+        // ── replay ────────────────────────────────────────────────────────
+        for (Event event : events) {
+            clock.advanceTo(event.offsetMinutes * 60_000L);
+            currentStatus[0] = event.statusCode;
 
-            System.out.printf("T+%-3s min  %-10s status=%d  ",
-                offsetMin, service, statusCode);
+            String prefix = String.format("T+%-3d min  %-10s status=%d",
+                event.offsetMinutes, event.service, event.statusCode);
 
             try {
-                Response response = client.execute(req);
-                System.out.printf("→ %s | circuit=%s%n",
-                    response.isSuccess() ? "success" : "failure",
-                    client.stateFor(service));
+                Response response = client.execute(
+                    new Request(event.service, "/api/resource", clock.millis()));
+
+                String outcome = response.isSuccess() ? "✓ success" : "✗ failure";
+                System.out.printf("%s  → %-10s | %-10s circuit=%s%n",
+                    prefix, outcome, "", client.stateFor(event.service));
+
             } catch (CircuitOpenException e) {
-                System.out.printf("→ BLOCKED | circuit=%s%n",
-                    client.stateFor(service));
+                System.out.printf("%s  → BLOCKED             | circuit=%s%n",
+                    prefix, client.stateFor(event.service));
             }
         }
 
         System.out.println("\n=== End of simulation ===");
-        System.out.println("\nNote: To properly simulate time-based transitions,");
-        System.out.println("inject a Clock interface into CircuitBreaker and use");
-        System.out.println("a TestClock that you can advance manually in tests.");
     }
+
+    // ── event record ─────────────────────────────────────────────────────────
+
+    record Event(String service, int statusCode, int offsetMinutes) {}
 }

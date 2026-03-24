@@ -1,4 +1,4 @@
-package org.flipkart.circuitbreaker;
+package org.flipkart.circuitbreaker.model;
 
 public class Request {
     public final String service;       // e.g. "ServiceB", "ServiceC"
