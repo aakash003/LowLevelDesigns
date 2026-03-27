@@ -1,4 +1,4 @@
-package org.flipkart.circuitbreaker.exceptions;
+package org.flipkart.circuitbreaker;
 
 /**
  * Thrown by WebClient.execute() when the circuit breaker for a service is OPEN.

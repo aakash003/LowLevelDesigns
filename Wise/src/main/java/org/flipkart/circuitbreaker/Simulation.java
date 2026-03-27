@@ -1,93 +1,102 @@
 package org.flipkart.circuitbreaker;
 
-import org.flipkart.circuitbreaker.client.WebClient;
-import org.flipkart.circuitbreaker.exceptions.CircuitOpenException;
-import org.flipkart.circuitbreaker.model.Request;
-import org.flipkart.circuitbreaker.model.Response;
-import org.flipkart.circuitbreaker.test.WebClientCircuitBreakerTest;
-
 import java.time.Instant;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Replays a sequence of (service, statusCode, offsetMinutes) events through a
- * SHARED WebClient so circuit-breaker state accumulates across events.
+ * Replays a scripted sequence of events through a shared WebClient,
+ * so circuit-breaker state accumulates across events exactly as it
+ * would in production.
  *
- * Time is driven by a TestClock advanced per event — no wall-clock dependency,
- * no Thread.sleep(), fully deterministic.
- *
- * Input format (per event):  service  statusCode  offsetMinutes
- * Example:                   ServiceB 500         2
+ * Time is driven by TestClock — fully deterministic, no Thread.sleep().
  */
 public class Simulation {
 
     public static void main(String[] args) {
 
-        System.out.println("=== Circuit Breaker Simulation ===\n");
+        System.out.println("╔══════════════════════════════════════════╗");
+        System.out.println("║     Circuit Breaker Simulation           ║");
+        System.out.println("╚══════════════════════════════════════════╝\n");
 
-        /*
-         * Scenario (matches the problem statement):
-         *
-         *   T+ 0 min  ServiceB 200  → success,  CLOSED
-         *   T+ 2 min  ServiceB 500  → failure 1, CLOSED
-         *   T+ 4 min  ServiceB 500  → failure 2, CLOSED
-         *   T+ 6 min  ServiceB 500  → failure 3 → OPEN
-         *   T+ 8 min  ServiceB 200  → BLOCKED   (only 2 min elapsed, cooldown = 5 min)
-         *   T+10 min  ServiceC 500  → ServiceC failure #1 (ServiceB still OPEN)
-         *   T+11 min  ServiceB 200  → BLOCKED   (only 5 min elapsed, need > 5 min)
-         *   T+12 min  ServiceB 200  → HALF_OPEN trial → success → CLOSED
-         *   T+13 min  ServiceB 200  → success,  CLOSED (normal again)
-         */
+        // ── per-service config ────────────────────────────────────────────
+        Map<String, CircuitBreakerConfig> configs = Map.of(
+
+            "SVC_B", CircuitBreakerConfig.builder()
+                         .failureThreshold(3)
+                         .windowMinutes(10)
+                         .cooldownMinutes(5)
+                         .build(),
+
+            "SVC_C", CircuitBreakerConfig.builder()
+                         .failureThreshold(10)
+                         .windowMinutes(5)
+                         .cooldownMinutes(2)
+                         .build()
+        );
+
+        // ── shared clock + client ─────────────────────────────────────────
+        TestClock    clock = new TestClock(Instant.EPOCH);
+        AtomicInteger sc   = new AtomicInteger(200);
+        WebClient client   = new WebClient(
+            req -> new Response(sc.get(), "body"), configs, clock);
+
+        // ── event script ──────────────────────────────────────────────────
+        record Event(String service, int status, int offsetMinutes) {}
+
         List<Event> events = List.of(
-            new Event("ServiceB", 200,  0),
-            new Event("ServiceB", 500,  2),
-            new Event("ServiceB", 500,  4),
-            new Event("ServiceB", 500,  6),   // trips → OPEN
-            new Event("ServiceB", 200,  8),   // blocked (2 min in cooldown)
-            new Event("ServiceC", 500, 10),   // ServiceC: independent breaker
-            new Event("ServiceB", 200, 11),   // still blocked (5 min not elapsed)
-            new Event("ServiceB", 200, 12),   // HALF_OPEN trial → success → CLOSED
-            new Event("ServiceB", 200, 13)    // back to normal
+            new Event("SVC_B", 200,  0),   // success — CLOSED
+            new Event("SVC_B", 500,  2),   // failure 1
+            new Event("SVC_B", 500,  4),   // failure 2
+            new Event("SVC_B", 500,  6),   // failure 3 → OPEN
+            new Event("SVC_B", 200,  8),   // BLOCKED (2 min elapsed, need 5)
+            new Event("SVC_C", 500, 10),   // SVC_C independent — its own breaker
+            new Event("SVC_B", 200, 11),   // BLOCKED (5 min not yet elapsed)
+            new Event("SVC_B", 200, 12),   // CLOSED again ✅ (6 min elapsed)
+            new Event("SVC_B", 200, 13)    // normal ✅
         );
 
-        // ── shared clock and client ───────────────────────────────────────
-        // ONE client for the whole simulation so breaker state accumulates.
-        WebClientCircuitBreakerTest.TestClock clock = new WebClientCircuitBreakerTest.TestClock(Instant.EPOCH);
-
-        // Transport returns whatever status the current event specifies.
-        // We swap the response via a one-element array (effectively a mutable cell).
-        int[] currentStatus = { 200 };
-        WebClient client = new WebClient(
-            req -> new Response(currentStatus[0], "simulated"),
-            clock
-        );
-
-        // ── replay ────────────────────────────────────────────────────────
         for (Event event : events) {
-            clock.advanceTo(event.offsetMinutes * 60_000L);
-            currentStatus[0] = event.statusCode;
+            clock.advanceTo((long) event.offsetMinutes() * 60_000L);
+            sc.set(event.status());
 
-            String prefix = String.format("T+%-3d min  %-10s status=%d",
-                event.offsetMinutes, event.service, event.statusCode);
+            String prefix = String.format("T+%-3d min  %-6s  status=%-3d",
+                event.offsetMinutes(), event.service(), event.status());
 
             try {
-                Response response = client.execute(
-                    new Request(event.service, "/api/resource", clock.millis()));
-
-                String outcome = response.isSuccess() ? "✓ success" : "✗ failure";
-                System.out.printf("%s  → %-10s | %-10s circuit=%s%n",
-                    prefix, outcome, "", client.stateFor(event.service));
-
+                Response r = client.execute(new Request(event.service(), "/api"));
+                System.out.printf("%s  → %-8s | circuit=%s%n",
+                    prefix,
+                    r.isSuccess() ? "✓ success" : "✗ failure",
+                    client.stateFor(event.service()));
             } catch (CircuitOpenException e) {
-                System.out.printf("%s  → BLOCKED             | circuit=%s%n",
-                    prefix, client.stateFor(event.service));
+                System.out.printf("%s  → BLOCKED  | circuit=%s%n",
+                    prefix, client.stateFor(event.service()));
             }
         }
 
-        System.out.println("\n=== End of simulation ===");
+        // ── stale failure scenario ────────────────────────────────────────
+        System.out.println("\n── Stale failure eviction scenario ──");
+        TestClock    c2 = new TestClock(Instant.EPOCH);
+        AtomicInteger s2 = new AtomicInteger(500);
+        WebClient    w2 = new WebClient(
+            req -> new Response(s2.get(), "body"), configs, c2);
+
+        executeQuiet(w2, "SVC_B", s2, 500);   // fail 1 at T+0
+        executeQuiet(w2, "SVC_B", s2, 500);   // fail 2 at T+0
+        c2.advance(11 * 60_000L);              // jump to T+11m — both stale
+        executeQuiet(w2, "SVC_B", s2, 500);   // fail 1 (fresh) — NOT tripped
+        System.out.printf("  SVC_B after stale eviction = %s  (expected CLOSED)%n",
+            w2.stateFor("SVC_B"));
+
+        System.out.println("\n═══ End of simulation ═══");
     }
 
-    // ── event record ─────────────────────────────────────────────────────────
-
-    record Event(String service, int statusCode, int offsetMinutes) {}
+    private static void executeQuiet(WebClient w, String svc,
+                                     AtomicInteger sc, int status) {
+        sc.set(status);
+        try { w.execute(new Request(svc, "/api")); }
+        catch (CircuitOpenException ignored) { }
+    }
 }
